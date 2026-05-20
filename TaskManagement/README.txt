@@ -1,5 +1,5 @@
 Task Management API
-AN API platform built with FastAPI for operational task management and user-based workflow tracking.
+An API platform built with FastAPI for operational task management and user-based workflow tracking.
 This project was developed to strengthen backend engineering, API design, authentication, and operational automation skills using Python.
 
 ・Features
