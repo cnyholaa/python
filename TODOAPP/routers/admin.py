@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from database import sessionLocal
-from models import Todos
+from models import Tasks
 from .auth import get_current_user
 
 
@@ -31,4 +31,4 @@ async def read_all(db:db_dependency, user:user_dependency):
     if user is None or user.get('role') != "admin":
         raise HTTPException(status_code=401, detail="Authorized failed")
 
-    return db.query(Todos).all()
+    return db.query(Tasks).all()
