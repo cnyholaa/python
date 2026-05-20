@@ -92,12 +92,12 @@ async def delete_task(user: user_dependency,
 
 
     task_model=db.query(Tasks)\
-        .filter(Tasks.owner_id == user.get('id')).filter(Tasks.id== task_id).first
+        .filter(Tasks.owner_id == user.get('id')).filter(Tasks.id== task_id).first()
 
     if task_model is None:
         raise HTTPException(status_code=404,detail="not found")
 
-    db.query(Tasks).filter(Tasks.id == task_id).filter(Tasks.id== task_id).delete()
+    db.query(Tasks).filter(Tasks.owner_id == user.get('id')).filter(Tasks.id== task_id).delete()
     db.commit()
 
 

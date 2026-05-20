@@ -29,6 +29,6 @@ async def read_all(db:db_dependency, user:user_dependency):
 
     print(user.get('role'))
     if user is None or user.get('role') != "admin":
-        raise HTTPException(status_code=401, detail="Authorized failed")
+        raise HTTPException(status_code=403, detail="Forbidden")
 
     return db.query(Tasks).all()
