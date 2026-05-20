@@ -49,8 +49,8 @@ GET(/admin/):	Admin-only task access
 
 ・How to Run
 1. Clone Repository
-  git clone https://github.com/cnyholaa/backend-task-api.git
-  cd backend-task-api
+  git clone https://github.com/cnyholaa/python.git
+  cd python
 2. Create Virtual Environment
   python -m venv venv
 3. Activate Virtual Environment
